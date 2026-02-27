@@ -1,0 +1,14 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/새 폴더1/" />
+  <Project Path="base/base.vcxproj" />
+  <Project Path="base2/base2.vcxproj" />
+  <Project Path="base3/base3.vcxproj" />
+  <Project Path="base4/base4.vcxproj" />
+  <Project Path="base5/base5.vcxproj" />
+  <Project Path="const/const.vcxproj" />
+  <Project Path="reference/reference.vcxproj" />
+</Solution>

@@ -1,7 +1,7 @@
 ﻿#include<iostream>
 using namespace std;
 
-class constSome {
+class constSome {	// 상수 멤버일때 초기화
 public:
 	const int value;
 	constSome(int i) :value(i) { }

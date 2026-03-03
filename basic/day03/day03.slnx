@@ -1,0 +1,18 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="array01.cpp/array01.cpp.vcxproj" Id="0e98339d-e4ab-4475-a570-212003026b72" />
+  <Project Path="Class01/Class01.vcxproj" Id="b014f580-a8f8-4a7e-a98a-2cac7b0c6368" />
+  <Project Path="Class02/Class02.vcxproj" Id="c99b9e1a-286b-4c64-85cf-546cb31ca592" />
+  <Project Path="Class03/Class03.vcxproj" Id="84499e3f-5472-424c-861f-3f1faec3e69e" />
+  <Project Path="Class04/Class04.vcxproj" Id="05b27a13-6080-4150-9818-e48bc9a6ba14" />
+  <Project Path="init01/init01.vcxproj" Id="749963f8-173d-4aa4-a59b-48efa825f56b" />
+  <Project Path="init02/init02.vcxproj" Id="86c89273-a576-4428-8a6d-e52d435b87b4" />
+  <Project Path="MyClass01/MyClass01.vcxproj" Id="9ea7ebd2-dd9c-4cc9-b7c6-90730e03e85b" />
+  <Project Path="MyClass02/MyClass02.vcxproj" Id="1ee93a87-656d-4bbe-bca1-a7bf4e105de1" />
+  <Project Path="ref02/ref02.vcxproj" Id="9e4521f9-a65a-450d-a771-cb2078b2f675" />
+  <Project Path="ref03/ref03.vcxproj" Id="bd489bcb-088f-4e8b-a200-bf414fbb8a22" />
+  <Project Path="ref04/ref04.vcxproj" Id="87cb4524-0c42-47e6-a430-7a2b494ea3ac" />
+</Solution>

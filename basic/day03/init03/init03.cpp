@@ -9,7 +9,7 @@ public:
 	void show() { printf("value : %d, value"); }
 };
 
-class refSome {
+class refSome {		// 레퍼런스 멤버 초기화
 public:
 	int& ri;
 	refSome(int& i) :ri(i) { }

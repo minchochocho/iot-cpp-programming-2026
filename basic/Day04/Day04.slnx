@@ -1,0 +1,16 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="conover/conover.vcxproj" Id="ada83927-6204-494d-97d8-be5e5caabdea" />
+  <Project Path="Copycon/Copycon.vcxproj" Id="ada14c68-c700-4f33-9bfe-79fdb3e80ed0" />
+  <Project Path="Copycon02/Copycon02.vcxproj" Id="4313c8d7-2182-459e-81dc-3e3f8eeefa14" />
+  <Project Path="Copycon03/Copycon03.vcxproj" Id="a6dfb862-9a06-4095-9351-61291d97a117" />
+  <Project Path="init04/init04.vcxproj" Id="6895ad94-88b8-4701-915a-98e12eae5c47" />
+  <Project Path="moveconstructor/moveconstructor.vcxproj" Id="63063d7c-2be8-454c-b358-6afeccf8a73f" />
+  <Project Path="MyClass/MyClass.vcxproj" Id="90da41a4-5485-4be7-b814-3fe0b114dc39" />
+  <Project Path="new01/new01.vcxproj" Id="fe300c9b-12e9-47bb-bb0d-9c4463bdbb22" />
+  <Project Path="new01_plus/new01_plus.vcxproj" Id="ede21700-032e-4b2b-9e0f-582bc2a86c0c" />
+  <Project Path="ZeroLeak_Inventory/ZeroLeak_Inventory.vcxproj" Id="efeff285-ec49-4c1e-b711-939ba0e6ef2c" />
+</Solution>

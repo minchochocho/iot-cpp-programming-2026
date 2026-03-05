@@ -4,6 +4,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="conover/conover.vcxproj" Id="ada83927-6204-494d-97d8-be5e5caabdea" />
+  <Project Path="ConversionConstructor/ConversionConstructor.vcxproj" Id="16e346f9-9f43-441b-aea4-0136c1da6b80" />
   <Project Path="Copycon/Copycon.vcxproj" Id="ada14c68-c700-4f33-9bfe-79fdb3e80ed0" />
   <Project Path="Copycon02/Copycon02.vcxproj" Id="4313c8d7-2182-459e-81dc-3e3f8eeefa14" />
   <Project Path="Copycon03/Copycon03.vcxproj" Id="a6dfb862-9a06-4095-9351-61291d97a117" />

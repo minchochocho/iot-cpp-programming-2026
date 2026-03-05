@@ -7,8 +7,7 @@ private:
 	int min;
 	int sec;
 public:
-	Time() { };
-	Time(int abssec) {
+	Time(int abssec=0) {
 		hour = abssec / 3600;
 		min = (abssec / 60) % 60;
 		sec = abssec % 60;

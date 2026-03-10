@@ -298,3 +298,499 @@ continue - 반복문에서 멈추고 조건 확인
 - 사용자 정의 함수
 > 사용자가 직접 만든 함수
 
+# 7일차
+
+이름을 편하게 쓰기위해 오버로딩을 사용
+
+Input   처리    Output - 단일
+
+배열  function  - 복수
+set
+list
+
+구조체 -> 객체
+이 개념이 머리속에 있어야
+
+## 변수 Scope
+### 1. 지역(local)
+- 스코프 겹침
+- 중첩 블록
+- 지역 스코프의 shadowing
+```
+int main()
+{
+int sum = 5;
+cout << sum << endl;
+{
+int sum = 3;
+cout << sum << endl; // 내부 블록의 sum 함수를 사용
+} 
+cout << sum << endl;   // 외부 블록의 sum 함수를 사용
+return 0;
+}
+```
+
+### 2. 전역(global)
+- 전역 스코프의 shadowing
+```
+#include <iostream>
+using namespace std;
+int num = 5;   // 전역 변수
+int main() {
+cout << num << endl;   
+int num = 25;          
+cout << num;  // 셰도잉
+return 0;
+}
+```
+- **범위 해결 연산자** `::`
+```
+int num = 5;  // 전역 변수
+int main()
+{
+int num = 25;  // 지역 변수
+cout << "전역 변수 num의 값 = " << ::num << endl;
+cout << "지역 변수 num의 값 = " << num << endl;
+return 0;
+}
+```
+
+## 정적 지역 변수 (Static Local Variable)
+```
+void fun();
+int main() {
+	fun();
+	fun();
+	fun();
+	return 0;
+
+}
+void fun() {
+	int num = 3;
+	int count = 0;
+	num++;
+	count++;
+	cout << num << "/" << count << endl;
+
+}
+```
+
+```
+void fun();
+int main() {
+	fun();
+	fun();
+	fun();
+	return 0;
+
+}
+
+void fun() {
+	static int count = 0;	// 명시적 정적 변수
+	count++;
+	cout << "count = " << count << endl;
+
+}
+```
+
+오버로딩의 조건
+매개변수 타입, 순서, 개수
+매개변수
+리턴값 상관x
+이름이 같아야
+
+## 함수 Scope
+### 1. 함수 이름의 scope
+- 함수는 선언 시점부터 프로그램 마지막까지 scope를 가짐
+- 선언 함수가 맨 위에 있으면 prototype 함수를 별도 선언 안해도 됨
+
+### 2. 함수 매개변수의 scope
+- 매개변수의 범위는 함수 내부에 한정되는 지역 변수
+- 함수가 호출될때 생성되고, 함수가 종료될 때 소멸 => 자동 지역 변수
+- 중괄호 안에서만 유지된다
+
+## function
+- 변수의 초기화
+- 자동지역변수는 미초기화시 쓰레기값 가짐
+- 전역변수와 정적지역변수는 기본값으로 초기화 됨
+```
+int global;
+
+int main(){
+    static int sLocal;  // 정적 지역 변수
+    int aLocal; // 자동 지역 변수 vs에서는 에러발생
+    // 출력
+    cout << "전역 변수 = " << global << endl;
+    cout << "정적 지역 변수 = " << sLocal << endl;
+    cout << "자동 지역 변수 = " << aLocal << endl;
+}
+```
+변수는 크게 4가지
+bool - 논리
+char - 문자
+int - 정수
+double - 실수
+
+처리의 묶음은 함수
+변수의 복수는 배열
+
+
+## Class
+
+인사관리
+
+인사관리자
+시스템
+
+제일 중요한거 사람
+사람에 대한 그릇이 필요
+그릇의 대한 개념을 코드로 들고오기 전에
+추상화 > 정의
+이 개념적으로 가져온것을 객체
+이걸 클래스로 가져오는 것
+
+### 클래스란?
+![alt text](image-5.png)
+객체의 개념은 딱 두가지
+- 속성
+- 기능(행위)
+
+데이터 베이스의 컬럼, 로우도 다 객체
+
+접근제어자
+public
+private
+protect
+
+#### 타입을 통해서 인스턴스 생성가능
+#### 타입은 추상화된 것, 인스턴스는 타입을 실체화 함
+- 데이터 멤버 : 속성, 인스턴스가 가지는 고유의 특징
+- 데이터 함수 : 기능(행위), 인스턴스가 가지는 고유의 기능
+### 클래스 구조
+```
+class Account
+{
+private: 
+// 헤더
+    int money;  // 데이터 멤버 선언
+public:
+    void setMoney(int m); // 멤버 함수 선언, 함수 내부에 변경 허가할 때
+    int getMoney() const; // 멤버 함수 선언, 함수 내부에 변경 불가할 때
+}; //클래스 정의 끝에는 반드시 semi-colon
+
+```
+
+### 멤버 데이터(Member Data)
+- C++11 부터는 클래스 선언 시 직접 데이터 멤버에 값 넣는 것 허용
+- 인플레이스 초기화
+
+#### 정적 멤버 변수
+- static 멤버 변수는 클래스 선언 내부에서 초기화X가 원칙
+```
+class Player {
+public:
+    static int totalPlayers; // 선언
+    Player() { totalPlayers++; }
+};
+// 클래스 외부에서 반드시 초기화 (중요!)
+int Player::totalPlayers = 0;
+int main() {
+    Player p1, p2, p3;
+    cout << "현재 플레이어 수: " << Player::totalPlayers << endl; // 3
+    return 0;
+}
+
+```
+
+인스턴스
+스태틱 - 클래스 밖에서 초기화
+
+### 멤버 함수 선언 - 방법1
+```
+class Member {
+private:
+    string name;
+    int age;
+public:
+    void setInfo(string n, int a){
+        name = n;
+        age = a;
+    }
+    void display(){
+        cout << "이름 : "<<name << ", 나이 : " << age << endl;
+    }
+};
+
+int main(){
+    Member m1;  // 객체 생성
+    m1.setInfo("홍길동",25);
+    m1.display();
+    return 0;
+}
+
+```
+
+### 멤버 함수 선언 - 방법2
+#### 해당 함수가 어떤 클래스의 소속인지 범위 지정 연산자 `::` 사용
+```
+class Member{
+private:
+    string name;
+    int age;
+public:
+    void setInfo(string n, int a);
+    void display();
+}
+
+void Member::setInfo(string n, int a){
+    name = n;
+    age = a;
+}
+
+void display(){
+    cout << "이름 : "<<name << ", 나이 : " << age << endl;
+}
+int main() {
+    Member m1;
+    m1.setInfo("이순신", 30);
+    m1.display();
+    return 0;
+}
+```
+
+### 정적 멤버 변수
+class Math{
+public:
+    static int add(int a, int b){return a + b;}
+}
+
+int main(){
+    cout 
+}
+
+### 멤버 함수 선언 - 한정자 const
+```
+double Circle::getRadius() const{
+    return radius;
+}
+
+void Circle::setRadius(double radius){  // 값을 수정해야 하므로 const 제거
+    this->radius = radius;  // 멤버변수와 매개변수가 같다면 this -> 로 구분 가능
+}
+
+void Member::setInfo(string n, in a){
+    name =n;
+    age = a;
+}
+void Member::display() const {  // class 밖에서 선언할 때
+std::cout << name << “/” << age << endl;
+}
+
+
+```
+
+### static과 const예제
+```
+class Circle {
+private:
+    double radius;
+public:
+    double getRadius() const { return radius; } // Getter: 값을 읽기만 하므로 const 가능
+    void setRadius(double r) { radius = r; } // Setter: 값을 수정해야 하므로 const 제거
+    // 일반 멤버 함수: radius에 접근해야 하므로 static 제거(static은 같은 static끼리)
+    double getAreaOfCircle() const { return radius * radius * 3.14; }
+};
+int main() {
+    Circle c1;
+    c1.setRadius(10.0);
+    cout << "반지름: " << c1.getRadius() << endl;
+    // 함수 호출 시 반드시 ()를 붙여야 함
+    cout << "넓이: " << c1.getAreaOfCircle() << endl;
+}
+
+```
+
+인스턴스는 스태틱이든 인스턴스든 써도 상관 없다
+
+```
+class Circle {
+private:
+    static double radius;
+public:
+    double getRadius() const { return radius; } // Getter: 값을 읽기만 하므로 const 가능
+    void setRadius(double r) { radius = r; } // Setter: 값을 수정해야 하므로 const 제거
+    // 일반 멤버 함수: radius에 접근해야 하므로 static 제거(static은 같은 static끼리)
+    static double getAreaOfCircle() { return radius* radius * 3.14; }
+};
+
+double Circle::radius=0.0;
+
+int main() {
+    Circle c1;
+    c1.setRadius(10.0);
+    cout << "반지름: " << c1.getRadius() << endl;
+    // 함수 호출 시 반드시 ()를 붙여야 함
+    cout << "넓이: " << c1.getAreaOfCircle() << endl;
+}
+
+```
+
+### 멤버 함수 선언 - 인라인 함수
+- 함수 본문이 짧을 때 성능 향상을 위해 컴파일러가 호출을 실제 코드로 대체, 최근에는 컴파일러가 알아서 처리
+```
+class Circle {
+private:
+    double radius;
+public:
+    double getRadius() const { return radius; }
+}
+// 명시적 인라인 함수 선언
+inline double Circle::getRadius() const {
+    return radius;
+}
+```
+
+### 정적 전역 변수/함수
+```
+static int counter = 100; 
+static void internalLog() {
+    cout << "내부 로그" << endl;
+}
+int main() {
+    cout << "counter : " << counter << endl;
+    internalLog();
+}
+```
+
+#### 다른 파일에서 접근 시도
+file1.cpp
+```
+static int value = 10;
+```
+
+file2.cpp
+```
+extern int value;
+```
+
+### 구조체
+- C언어에서 있었던 구조체를 C++에서 사용
+- 구조체의 모든 멤버는 기본적으로 public, 클래스는 private
+- 멤버 함수를 사용하지 않는 경우, 쉽게 만들고 요소에 직접 접근 가능한 구조체를 사용하기도 함
+![alt text](image-6.png)
+
+### 생성자 : 특별한 멤버 함수
+- 클래스를 초기화 하는데 사용
+> 즉, 인스턴스를 만들 때 사용
+- 리턴 값이 없으며, 이름이 클래스 이름과 동일
+- 매개변수가 있는 생성자, 기본 생성자
+- 위의 2 생성자가 업으면 합성 기본 생성자를 자동 생성
+- 합성 기본 생성자는 데이터 멤버를 지정 안하면 쓰레기 값으로 초기화
+
+리턴 타입이 없는데 클래스 이름이 똑같음
+인스턴스가 만들어진 시점에 초기화 = 생성자
+인스턴스가 만들어진 뒤에 초기화 하겠다 = set()이런 함수를 만들어서 함
+
+생성자 setter가 제대로 동작을 안하면
+
+캡슐화
+객체가 가지고 있는 내부의 자원들을 보호
+
+#### 생성자 오버로딩
+```
+class Circle {
+private:
+    double radius;
+public:
+    Circle(double radius);        
+    Circle()                      
+    // 매개변수가 있는 생성자
+    // 기본 생성자
+    Circle(const Circle& circle); // 복사 생성자
+}
+```
+
+이걸 보면 오버로딩이 떠올라야 한다
+매
+리
+이
+
+### 복사 생성자
+- 기존 인스턴스와 똑같은 값을 가진 새로운 객체를 만듦
+- 복사생성자를 만들지 않으면 시스템이 합성 복사 생성자를 만듦
+```
+class A {
+    public:
+    int x;
+    A(int value) {    
+        x = value;
+        cout << “일반 생성자" << endl;
+    }
+    A(const A& other) { 
+        x = other.x;
+        cout << “복사 생성자" << endl;
+    }
+};
+int main() {
+    A a1(10);       // 원본 객체 생성
+    A a2 = a1;      // 복사 생성자 호출
+    cout << "a1 value: " << a1.x << endl;
+    cout << "a2 value: " << a2.x << endl;
+    cout << "a1 address: " << &a1 << endl;
+    cout << "a2 address: " << &a2 << endl;
+}
+```
+![alt text](image-9.png)
+### 생성자 초기화 리스트
+- **대입** : `{radius = 0.0;}`
+> 변수가 쓰레기 값으로 생성된 후, 값을 **대입**
+- **초기화 리스트** : `radius(0.0);`
+> 변수가 생성됨과 동시에 값을 초기화
+```
+class Circle {
+private:
+    const double PI;//상수 반드시 초기화 리스트 필요
+    double radius;
+public:
+    // 초기화 리스트에서 PI를 3.14로 초기화
+    Circle() : PI(3.14), radius(0.0) {
+    // PI = 3.14; 라고 하면 에러(상수 대입 불가)
+    }
+};
+//초기화 리스트
+Circle::Circle(double rds): radius(rds) { }
+//생략하면 쓰레기 값 생성
+Circle::Circle(): radius(1.0){ }
+//초기화 리스트, 복사 생성자
+Circle::Circle(const Circle& cr): radius(cr.radius) { }
+```
+
+
+### Singleton Pattern
+- 프로그램 전체에서 **단 하나의 인스턴스만 존재**
+```
+class Singleton {
+private:
+	Singleton() { } // 생성자를 private으로 숨김
+public:
+	// 복사 생성자와 복사 대입 연산자를 삭제(delete)하여 복사를 원천 봉쇄
+	Singleton(const Singleton& extra) = delete;
+	Singleton& operator=(const Singleton& extra) = delete;
+	static Singleton& getInstance() {
+		static Singleton instance;
+		return instance;
+	}
+};
+int main() {
+	Singleton& s1 = Singleton::getInstance();
+	Singleton& s2 = Singleton::getInstance();
+	cout << "s1 주소: " << &s1 << endl;
+	cout << "s2 주소: " << &s2 << endl;
+	return 0;
+}
+```
+![alt text](image-10.png)
+
+생성자도 리턴타입이 없을 뿐 멤버함수의 일종
+
+### 

@@ -1,0 +1,17 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="10_function_library2/10_function_library2.vcxproj" Id="3a44a01e-4e4a-4f18-b3b9-a6f0bc0f7f4c" />
+  <Project Path="11_function_bvalue/11_function_bvalue.vcxproj" Id="f2fd9662-4186-43aa-bb19-74c5142be9f1" />
+  <Project Path="12_class/12_class.vcxproj" Id="01ee7689-58b6-4615-bccc-7b61002ddaec" />
+  <Project Path="13_class_use/13_class_use.vcxproj" Id="aedcc84c-fbde-4b13-9905-1623b2108545" />
+  <Project Path="14_game/14_game.vcxproj" Id="aea8ff49-db50-4c68-bfdc-0287c6a7ce2c" />
+  <Project Path="15_class_extension/15_class_extension.vcxproj" Id="b3c65d49-8cf0-4873-b44d-e3d336cb1164" />
+  <Project Path="16_class_overide/16_class_overide.vcxproj" Id="cae88e2d-005a-4412-811c-1d0a109b8f95" />
+  <Project Path="17_class_typecasting/17_class_typecasting.vcxproj" Id="0aab74e9-2df8-4de3-b171-c6c5262313b0" />
+  <Project Path="18_tokenizer/18_tokenizer.vcxproj" Id="a13dee9d-7ab9-4066-8f86-074444d24fa6" />
+  <Project Path="file1/file1.vcxproj" Id="e1bafd84-2d1f-41af-b1ec-511383efeb78" />
+  <Project Path="Person/Person.vcxproj" Id="955b63aa-aed2-422c-a508-c226df7f692e" />
+</Solution>

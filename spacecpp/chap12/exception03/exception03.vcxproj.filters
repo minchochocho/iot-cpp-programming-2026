@@ -15,22 +15,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="course.cpp">
+    <ClCompile Include="exception03.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="courseRoster.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="courseRoster.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="course.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="student.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2c65761b-d20c-4627-9a73-88df65607710}</ProjectGuid>
-    <RootNamespace>courseRoster</RootNamespace>
+    <ProjectGuid>{8bd538ac-5268-4e70-bcf2-f95c2ea6fb02}</ProjectGuid>
+    <RootNamespace>MultiInheritance</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,13 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="course.cpp" />
-    <ClCompile Include="courseRoster.cpp" />
+    <ClCompile Include="app.cpp" />
+    <ClCompile Include="person.cpp" />
+    <ClCompile Include="professor.cpp" />
+    <ClCompile Include="student.cpp" />
+    <ClCompile Include="ta.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="course.h" />
-    <ClInclude Include="courseRoster.h" />
+    <ClInclude Include="person.h" />
+    <ClInclude Include="professor.h" />
     <ClInclude Include="student.h" />
+    <ClInclude Include="ta.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

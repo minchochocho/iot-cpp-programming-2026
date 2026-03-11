@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{2c65761b-d20c-4627-9a73-88df65607710}</ProjectGuid>
-    <RootNamespace>courseRoster</RootNamespace>
+    <ProjectGuid>{5e9c0c77-ff75-402d-913d-ada295bdd34f}</ProjectGuid>
+    <RootNamespace>cppapplicate</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,13 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="course.cpp" />
-    <ClCompile Include="courseRoster.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="course.h" />
-    <ClInclude Include="courseRoster.h" />
-    <ClInclude Include="student.h" />
+    <ClCompile Include="exception01.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

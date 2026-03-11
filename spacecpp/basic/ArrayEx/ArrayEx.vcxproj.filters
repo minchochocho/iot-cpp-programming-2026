@@ -15,21 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="course.cpp">
+    <ClCompile Include="ArrayEx.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="courseRoster.cpp">
+    <ClCompile Include="02_array.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="03_array2d.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="courseRoster.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="course.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="student.h">
+    <ClInclude Include="ArrayUtil.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

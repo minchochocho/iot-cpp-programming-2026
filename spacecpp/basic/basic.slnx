@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="ArrayEx/ArrayEx.vcxproj" Id="994c533c-9dff-40af-a966-ac95ce1ade1c" />
+</Solution>

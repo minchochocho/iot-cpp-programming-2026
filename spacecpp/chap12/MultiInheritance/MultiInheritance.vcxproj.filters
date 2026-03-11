@@ -15,21 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="course.cpp">
+    <ClCompile Include="app.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="courseRoster.cpp">
+    <ClCompile Include="person.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="student.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="professor.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ta.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="courseRoster.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="course.h">
+    <ClInclude Include="person.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="student.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="professor.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ta.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

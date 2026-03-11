@@ -12,6 +12,7 @@
   <Project Path="16_class_overide/16_class_overide.vcxproj" Id="cae88e2d-005a-4412-811c-1d0a109b8f95" />
   <Project Path="17_class_typecasting/17_class_typecasting.vcxproj" Id="0aab74e9-2df8-4de3-b171-c6c5262313b0" />
   <Project Path="18_tokenizer/18_tokenizer.vcxproj" Id="a13dee9d-7ab9-4066-8f86-074444d24fa6" />
+  <Project Path="courseRoster/courseRoster.vcxproj" Id="2c65761b-d20c-4627-9a73-88df65607710" />
   <Project Path="file1/file1.vcxproj" Id="e1bafd84-2d1f-41af-b1ec-511383efeb78" />
   <Project Path="Person/Person.vcxproj" Id="955b63aa-aed2-422c-a508-c226df7f692e" />
 </Solution>

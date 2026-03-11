@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="cpp_applicate/cpp_applicate.vcxproj" />
+  <Project Path="exception02/exception02.vcxproj" />
+  <Project Path="exception03/exception03.vcxproj" />
+  <Project Path="MultiInheritance/MultiInheritance.vcxproj" />
+</Solution>

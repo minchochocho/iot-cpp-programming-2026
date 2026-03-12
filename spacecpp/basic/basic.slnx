@@ -4,4 +4,10 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="ArrayEx/ArrayEx.vcxproj" Id="994c533c-9dff-40af-a966-ac95ce1ade1c" />
+  <Project Path="IO/IO.vcxproj" Id="8b5b9537-2af6-4510-ac35-4d26c0f206e6" />
+  <Project Path="linkedlist/linkedlist.vcxproj" Id="2fd6bb5c-ed5a-4cdc-a41c-1713628cb959" />
+  <Project Path="map/map.vcxproj" Id="2a126afb-f232-49e0-91a0-62490ce6f827" />
+  <Project Path="set/set.vcxproj" Id="218e23ed-1b12-46c7-9fbb-a56b442af2fc" />
+  <Project Path="stack/stack.vcxproj" Id="bfdf5967-0962-4a07-bb4e-7d22abada463" />
+  <Project Path="vector/vector.vcxproj" Id="02ce5eda-31a2-49a2-bc8f-8859127bd48e" />
 </Solution>

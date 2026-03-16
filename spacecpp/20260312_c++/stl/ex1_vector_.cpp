@@ -5,7 +5,8 @@ using namespace std;
 int main() {
     vector<int> v;
     vector<int> v1 = {1,2,3,4,5};
-    vector<int> v2(5);
+    vector<int> v2(5);  // 0,0,0,0,0
+    vector<int> v3(5,10);
 
     v.push_back(10);
     v.push_back(20);
